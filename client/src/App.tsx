@@ -11,19 +11,24 @@ import Papers from "./pages/Papers";
 import Layout from "./components/Layout";
 
 
+import { Router as WouterRouter } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
+
 function Router() {
   return (
-    <Layout>
-      <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/findings"} component={Findings} />
-        <Route path={"/tools"} component={Tools} />
-        <Route path={"/papers"} component={Papers} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
+    <WouterRouter hook={useHashLocation}>
+      <Layout>
+        <Switch>
+          <Route path={"/"} component={Home} />
+          <Route path={"/findings"} component={Findings} />
+          <Route path={"/tools"} component={Tools} />
+          <Route path={"/papers"} component={Papers} />
+          <Route path={"/404"} component={NotFound} />
+          {/* Final fallback route */}
+          <Route component={NotFound} />
+        </Switch>
+      </Layout>
+    </WouterRouter>
   );
 }
 
