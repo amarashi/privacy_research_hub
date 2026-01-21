@@ -49,7 +49,7 @@ export default function Home() {
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary/20 opacity-20 blur group-hover:opacity-40 transition duration-1000"></div>
             <div className="relative border border-border bg-black/50 backdrop-blur-sm p-2">
               <img 
-                src="/images/hero-canary.png" 
+                src={`${import.meta.env.BASE_URL}images/hero-canary.png`} 
                 alt="Digital Canary Visualization" 
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
               />
@@ -105,7 +105,7 @@ export default function Home() {
       <section className="grid lg:grid-cols-2 gap-12 items-center bg-secondary/20 p-8 border border-border">
         <div className="order-2 lg:order-1">
           <img 
-            src="/images/audit-grid.png" 
+            src={`${import.meta.env.BASE_URL}images/audit-grid.png`} 
             alt="Audit Grid Visualization" 
             className="w-full h-auto border border-border opacity-80 hover:opacity-100 transition-opacity"
           />

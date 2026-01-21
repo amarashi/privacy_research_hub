@@ -65,7 +65,7 @@ export default function Tools() {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-2xl opacity-50"></div>
           <img 
-            src="/images/tools-network.png" 
+            src={`${import.meta.env.BASE_URL}images/tools-network.png`} 
             alt="Tools Network Visualization" 
             className="relative z-10 w-full h-auto border border-border bg-black/50"
           />
